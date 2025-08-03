@@ -1,4 +1,4 @@
-🌊 Flood Risk Tool
+🌊 Flood Risk Tool (Singapore)
 Hey there! Welcome to the Flood Risk Funhouse—a quirky little tool to see if your place is “flooded” or floating high and dry! Enter a location, get a splashy risk report, and have a laugh. Pun intended, it’s all for fun! 💦
 
 What’s This About?
@@ -6,7 +6,7 @@ Type in a six-digit postal code (any will do!), and this app spits out a flood r
 
 How to Play
 
-Drop a Postal Code: Any six-digit number works (e.g. 238858, 018980, 529510, 738343, 819642 etc. ).
+Drop a Singapore Postal Code: Any six-digit number works (e.g. 238858, 018980, 529510, 738343, 819642 etc. ).
 Click Analyze: Watch the magic unfold.
 Enjoy the Results: Check out your risk level, map, and a fun verdict.
 
