@@ -72,6 +72,7 @@ st.markdown("""
     .kpi-container {
         text-align: center; padding: 1rem;
         display: flex; flex-direction: column; justify-content: center;
+        min-height: 192px; /* Added to match the height of gauge chart boxes */
     }
     
     .kpi-label {
@@ -320,5 +321,6 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
