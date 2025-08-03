@@ -239,7 +239,7 @@ def main():
     
     _, mid_col, _ = st.columns([1.5, 3, 1.5])
     with mid_col:
-        in_col, an_col, cl_col = st.columns([3, 1, 1])
+        in_col, an_col, cl_col = st.columns([1, 1, 1])
         with in_col:
             st.text_input("Postal Code", key="postal_input", placeholder="Enter Postal Code...", max_chars=6, label_visibility="collapsed")
         with an_col:
@@ -320,4 +320,5 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
