@@ -1,5 +1,5 @@
 🌊 Flood Risk Tool (Singapore)
-Hey there! Welcome to the Flood Risk Funhouse—a quirky little tool to see if your place is “flooded” or floating high and dry! Enter a location, get a splashy risk report, and have a laugh. Pun intended, it’s all for fun! 💦
+Hey there! Welcome to the Flood Risk Funhouse—a quirky little tool to see if your place is “flooded” or floating high and dry! Enter a location, get a splashy risk report. Pun intended, it’s all for fun! 💦
 
 What’s This About?
 Type in a six-digit postal code (any will do!), and this app spits out a flood risk assessment—complete with gauges, a map, and a cheeky tip (ark-building, anyone?). The catch? The flood risk levels are randomly generated, so don’t start sandbagging your house just yet!
@@ -24,6 +24,9 @@ Plotly: For fancy gauges.
 Pandas: For wrangling data behind the scenes.
 
 Hosted free on Streamlit Community Cloud—because sharing is caring!
+
+Visit: https://flood-risk-tool.streamlit.app/
+
 
 Give It a Go!
 Dive in and see if your spot’s “underwater” or safe! It’s all in good fun—try it out and let the waves of laughter roll in. 🌊
