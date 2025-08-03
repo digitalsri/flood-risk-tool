@@ -239,7 +239,7 @@ def main():
     
     _, mid_col, _ = st.columns([1.5, 3, 1.5])
     with mid_col:
-        in_col, an_col, cl_col = st.columns([0.7, 0.15, 0.15])
+        in_col, an_col, cl_col = st.columns([0.64, 0.18, 0.18])
         with in_col:
             st.text_input("Postal Code", key="postal_input", placeholder="Enter Postal Code...", max_chars=6, label_visibility="collapsed")
         with an_col:
@@ -318,4 +318,5 @@ def main():
             st.error(f"Postal code **{postal_code}** not found in database. Please check the code and try again.")
 
 if __name__ == "__main__":
+
     main()
