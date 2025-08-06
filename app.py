@@ -108,22 +108,26 @@ st.markdown("""
     
     .icon-svg { width: 24px; height: 24px; margin-right: 12px; }
     .indicator-icon-svg { width: 20px; height: 20px; margin-right: 8px; }
-    
-    .stButton > button {
-        border-radius: 8px; padding: 0.75rem; font-weight: bold;
-        transition: all 0.3s; width: 100%; border: 1px solid #d1d1d1;
-    }
-    .stButton > button[kind="primary"] { background-color: #2a5298; color: white; border: none; }
-    .stButton > button[kind="secondary"] { background-color: #ffffff; color: #333; }
 
-    @media (max-width: 600px) {
-        .main-header h1 { font-size: 1.5rem; }
-        .kpi-value { font-size: 1.8rem; }
-        .location-header { font-size: 1.2rem; padding: 0.5rem; }
-        .risk-indicator-container { flex-direction: column; }
-        .indicator { margin: 0.5rem 0; }
-    }
-            
+    .stButton > button {
+            border-radius: 8px; padding: 0.75rem; font-weight: bold;
+            transition: all 0.3s; width: 100% !important; border: 1px solid #d1d1d1;
+        }
+        .stButton > button[kind="primary"] { background-color: #2a5298; color: white; border: none; }
+        .stButton > button[kind="secondary"] { background-color: #ffffff; color: #333; }
+        
+        /* Ensure columns have minimal gaps */
+        .stColumns > div {
+            padding-left: 0.25rem !important;
+            padding-right: 0.25rem !important;
+        }
+        
+        /* Ensure horizontal blocks align properly */
+        div[data-testid="stHorizontalBlock"] > div {
+            display: flex;
+            align-items: center;
+        }
+                           
     @media (max-width: 768px) {
     .main-header {
         padding: 1.25rem 0.75rem;}
@@ -149,7 +153,6 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- Data Loading and Processing ---
-# Replace your load_data function with this enhanced version:
 
 @st.cache_data
 def load_data(file_path="flood_risk_data.csv.gz"):
@@ -222,7 +225,6 @@ def create_flood_map(info, rcp):
 
 # --- Main Application Logic ---
 def main():
-    # st.markdown("<div class='main-header'><h1>Flood Risk Assessment Tool</h1><p>Enter a six-digit Singapore postal code to assess location-specific flood risk</p></div>", unsafe_allow_html=True)
     st.markdown("""
     <div class='main-header'>
         <h1>Flood Risk Assessment Tool</h1>
@@ -240,13 +242,13 @@ def main():
     
     _, mid_col, _ = st.columns([1.5, 3, 1.5])
     with mid_col:
-        in_col, an_col, cl_col = st.columns([1, 1, 1])
-        with in_col:
-            st.text_input("Postal Code", key="postal_input", placeholder="Enter Postal Code...", max_chars=6, label_visibility="collapsed")
-        with an_col:
-            analyze_button = st.button("Analyze", type="primary")
-        with cl_col:
-            st.button("Clear", type="secondary", on_click=clear_state)
+            in_col, an_col, cl_col = st.columns([4, 1.2, 1])
+            with in_col:
+                st.text_input("Postal Code", key="postal_input", placeholder="Enter Postal Code...", max_chars=6, label_visibility="collapsed")
+            with an_col:
+                analyze_button = st.button("Analyze", type="primary", use_container_width=True)
+            with cl_col:
+                st.button("Clear", type="secondary", on_click=clear_state, use_container_width=True)    
 
     if analyze_button:
         if st.session_state.postal_input.isdigit() and len(st.session_state.postal_input) == 6:
@@ -312,7 +314,7 @@ def main():
 
             st.markdown("### Location Map")
             try:
-                folium_static(create_flood_map(info, rcp85_depth), width=None)
+                folium_static(create_flood_map(info, rcp85_depth), width=None, height=400)
             except Exception as e:
                 st.error("Error rendering map. Please try again later.")
         else:
@@ -321,7 +323,3 @@ def main():
 if __name__ == "__main__":
 
     main()
-
-
-
-
