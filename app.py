@@ -314,7 +314,7 @@ def main():
 
             st.markdown("### Location Map")
             try:
-                folium_static(create_flood_map(info, rcp85_depth), width=None, height=400)
+                folium_static(create_flood_map(info, rcp85_depth), width=1300, height=400)
             except Exception as e:
                 st.error("Error rendering map. Please try again later.")
         else:
@@ -323,3 +323,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
