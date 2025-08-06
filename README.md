@@ -28,4 +28,5 @@ Pandas: For wrangling data behind the scenes.
 
 Give It a Go!
 Dive in and see if your spot’s “underwater” or safe! It’s all in good fun—try it out and let the waves of laughter roll in. 🌊
-Crafted with a splash of joy by Rahul Yadav
+Crafted with a splash of joy 
+- by Rahul Yadav
