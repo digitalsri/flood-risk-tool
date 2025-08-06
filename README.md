@@ -10,8 +10,6 @@ Drop a Singapore Postal Code: Any six-digit number works (e.g. 238858, 018980, 5
 Click Analyze: Watch the magic unfold.
 Enjoy the Results: Check out your risk level, map, and a fun verdict.
 
-No PhD required—just a sense of humor!
-
 Disclaimer
 ⚠️ Heads Up: The flood risk levels are 100% made up for entertainment purposes, as they are randomly generated. If your place looks “submerged,” it’s just the tool having a splashy good time! 😄
 
