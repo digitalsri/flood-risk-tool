@@ -94,14 +94,14 @@ st.markdown("""
     }
 
     .risk-indicator-container {
-        display: flex; justify-content: center; align-items: center;
-        background-color: #f8f9fa; border-radius: 10px; padding: 1rem;
-        margin-top: 1.5rem; border: 1px solid #e9ecef;
+    display: flex; justify-content: center; align-items: center;
+    border-radius: 10px; padding: 1rem;
+    margin-top: 1.5rem; border: 1px solid #e9ecef;
     }
-
+    
     .indicator {
         display: flex; align-items: center; font-size: 1.1rem;
-        font-weight: 600; color: #495057; text-align: center; margin: 0 1.5rem;
+        font-weight: 600; text-align: center; margin: 0 1.5rem;
     }
 
     .indicator-value { font-size: 1.1rem; font-weight: bold; margin-left: 8px; }
@@ -323,4 +323,5 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
